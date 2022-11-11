@@ -1,8 +1,12 @@
 <script>
-    import TopBar from '$lib/components/TopBar.svelte'
+    import InventoryBar from '$lib/components/InventoryBar.svelte'
 </script>
 
-<TopBar />
+<InventoryBar
+    inventory_title="Sheet Music"
+    number_of_items={32}
+    number_of_kinds={11}
+/>
 
 <slot></slot>
 
