@@ -1,14 +1,15 @@
 <script>
     import FaRegQuestionCircle from 'svelte-icons/fa/FaRegQuestionCircle.svelte'
-
-    export let item=""
-    export let kind=""
+    import { createEventDispatcher } from 'svelte';
+    const dispatch = createEventDispatcher();
+    
+    export let item = ""
+    export let kind = ""
+    export let icon = null
+    export let selected = false
 
     $: is_textually_specified = (item != "") && (kind != "")
-
-    export let icon=null
     
-    let selected=false
 
     function truncate(input, length) {
         if (input.length > length) {
@@ -18,9 +19,7 @@
     };
 
     function onClick() {
-        if (selectable) {
-            selected = !selected
-        }
+        dispatch('click', {})
     }
 
     $: computed_icon = icon ? icon : (is_textually_specified ? FaRegQuestionCircle : null)

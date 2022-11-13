@@ -3,13 +3,22 @@
 
     import InventorySquare from "./InventorySquare.svelte";
     import FaUser from 'svelte-icons/fa/FaUser.svelte';
+
+    let exampleSquareSelected = false;
 </script>
 
 <WhiteArea>
     <input placeholder="Quick filter..." id="search" class="search" />
 
     <div class="squares">
-        <InventorySquare kind="User" item="Kuklin István born ldskjfk bsjvl sfsklj  sdfs" icon={FaUser} />
+        <InventorySquare
+            kind="User"
+            item="Kuklin István born ldskjfk bsjvl sfsklj  sdfs"
+            icon={FaUser}
+            selected={exampleSquareSelected}
+            on:click={() => exampleSquareSelected = !exampleSquareSelected}
+        />
+
         <InventorySquare />
         <InventorySquare />
         <InventorySquare />
