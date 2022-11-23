@@ -1,14 +1,35 @@
 <script>
     import WhiteArea from "./WhiteArea.svelte";
-
+    
     import InventorySquare from "./InventorySquare.svelte";
     import FaUser from 'svelte-icons/fa/FaUser.svelte';
+    
+    import FilteringCapsule from './capsules/FilteringCapsule.svelte';
+    import GridCapsule from './capsules/GridCapsule.svelte';
+    import PagesCapsule from './capsules/PagesCapsule.svelte';
+
 
     let exampleSquareSelected = false;
+
+    let rows=3;
+    let columns=7;
+    let page=1;
+    let last_page=3
+
+    let capsuleLineHeight;
+    let capsuleLabelBorder;
+    let capsuleBorderRadius;
+    let capsuleDefaultContentPadding;
+
 </script>
 
 <WhiteArea>
-    <input placeholder="Quick filter..." id="search" class="search" />
+    <div class="controls">
+        
+        <FilteringCapsule />
+        <PagesCapsule />
+        <GridCapsule />
+    </div>
 
     <div class="squares">
         <InventorySquare
@@ -31,19 +52,48 @@
 </WhiteArea>
 
 <style>
-    .search {
-        display: block;
-        width: calc(100% - 0.5em - 0.5em); /* subtract the padding on left and right */
-        font-size: 12pt;
-        /* height: 18pt; */
-        border-radius: 5px;
+    .controls {
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
 
         margin-top: 0.25em;
         margin-bottom: 1em;
+    }
+
+    .font-icon {
+        max-width: 1em;
+        max-height: 1em;
+        display: inline-block;
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+
+    .filler {
+        flex-grow: 1;
+    }
+
+    .controls input {
         padding: 0.5em;
 
-        border: 1px solid gray;
+        
 
+    }
+
+    .pagination {
+        font-size: 12pt;
+        display: flex;
+        align-content: center;
+    }
+
+    .pagination>input {
+        width: 1.2em;
+        border-radius: unset;
+        border: unset;
+        border-bottom: 1px solid gray;
+        text-align: center;
+
+        padding: 0em;
     }
 
     .squares {

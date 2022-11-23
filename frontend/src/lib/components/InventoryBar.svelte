@@ -38,7 +38,7 @@
     .bar-item {
         display: flex;
         align-items: center;
-        color:  #404040;
+        color:  var(--inventory-bar-item);
         padding-right: 0.7em;
     }
 

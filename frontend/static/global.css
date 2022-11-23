@@ -1,4 +1,4 @@
 body {
-    background-color: #ebebeb;
+    background-color: var(--body-bg-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

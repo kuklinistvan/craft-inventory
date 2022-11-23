@@ -75,25 +75,25 @@
     .square {
         width: 100px;
         height: 100px;
-        background-color: #EBEBEB;
+        background-color: var(--inventory-view-square-default-color);
         transition: ease 0.2s;
         padding: 15px;
         text-align: center;
     }
 
     .square.selected {
-        background: #00AAFF;
+        background: var(--inventory-view-square-selected-color);
         transition: ease 0.2s;
     }
 
     .square.selected:hover {
-        background: #89D4FA;
+        background: var(--inventory-view-square-selected-hover-color);
         transition: ease 0.2s;
     }
 
     .square:hover {
         transition: ease 0.2s;
-        background-color: #BABDB6;
+        background-color: var(--inventory-view-square-hover-color);
     }
     
     .square.selectable {
