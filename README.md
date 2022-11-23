@@ -1,22 +1,24 @@
-# Mini prototype project: Craft Inventory
+# Proof of Concept project: Craft Inventory
 
-The personal database framework server you always missed but could not describe.
-It has one goal: allowing you to easily model any kind of inventory relations saving
-you from writing the usual boilerplate most personal database projects imply, such as user and session handling, permission system, etc.
+An experiment to creating an easy to use modular database framework for general,
+mainly personal home inventory keeping.
 
-At this very moment not even I can describe it. Though maybe I will be able through this
-prototype. Let this be an experiment.
-
-This is by Minecraft as a moddable open world platform. In this database framework you have:
+It is somewhat inspired by Minecraft as a moddable open world platform in which
+one gets access to new features built upon the core features via installing
+mods. The base entities of this database framework are:
 
 * users,
-* worlds,
+* worlds (collections),
 * types of items,
-* queries, mutations and permissions,
+* queries (filters), mutations and permissions,
 * forms and views.
 
-Mods or extensions or modules or expansion packs - I will probably call them mods - will contain new kinds of items, queries, mutations, permissions, forms, and views. A world is an isolated entity that can have items and mods in it.
+Mods (plugins) are the way to extend the built-in instances of the base classes
+of the above list by custom items. A world is an isolated entity that can have
+items and mods in it.
 
-Users exist in globally in the framework.
+In this early stage of this trial I'm coding and trying ideas to see how they
+fit while getting practice with some frameworks I am interested in. It is probably 
+one of those projects that do not survive. Let me see where it goes...
 
-Give me some time to elaborate further :)
+Thank you for taking a look!
