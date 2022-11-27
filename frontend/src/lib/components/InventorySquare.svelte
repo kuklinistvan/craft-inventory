@@ -73,26 +73,20 @@
     }
 
     .square {
-        width: 100px;
-        height: 100px;
-        background-color: var(--inventory-view-square-default-color);
-        transition: ease 0.2s;
+        background-color: var(--inventory-view-square-default-color);        
         padding: 15px;
         text-align: center;
     }
 
     .square.selected {
         background: var(--inventory-view-square-selected-color);
-        transition: ease 0.2s;
     }
 
     .square.selected:hover {
         background: var(--inventory-view-square-selected-hover-color);
-        transition: ease 0.2s;
     }
 
     .square:hover {
-        transition: ease 0.2s;
         background-color: var(--inventory-view-square-hover-color);
     }
     

@@ -43,6 +43,10 @@
         display: flex;
     }
 
+    .capsule :global(span) {
+        white-space: nowrap;
+    }
+
     .capsule .content {
         display: flex;
         align-items: center;

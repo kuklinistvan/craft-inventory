@@ -8,18 +8,7 @@
     import GridCapsule from './capsules/GridCapsule.svelte';
     import PagesCapsule from './capsules/PagesCapsule.svelte';
 
-
     let exampleSquareSelected = false;
-
-    let rows=3;
-    let columns=7;
-    let page=1;
-    let last_page=3
-
-    let capsuleLineHeight;
-    let capsuleLabelBorder;
-    let capsuleBorderRadius;
-    let capsuleDefaultContentPadding;
 
 </script>
 
@@ -56,6 +45,9 @@
         display: flex;
         align-items: center;
         gap: 0.7em;
+
+        flex-wrap: wrap;
+        overflow: auto;
 
         margin-top: 0.25em;
         margin-bottom: 1em;
@@ -97,8 +89,12 @@
     }
 
     .squares {
-        display: flex;
-        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(135px, 135px));
+        justify-content: center;
+        grid-auto-rows: 135px;
         gap: 10px;
         transition: 0.2 ease;
     }
