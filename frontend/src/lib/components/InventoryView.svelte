@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import WhiteArea from "./WhiteArea.svelte";
     
     import InventorySquare from "./InventorySquare.svelte";
@@ -8,7 +8,7 @@
     import GridCapsule from './capsules/GridCapsule.svelte';
     import PagesCapsule from './capsules/PagesCapsule.svelte';
 
-    let exampleSquareSelected = false;
+    let exampleSquareSelected : boolean = false;
 
 </script>
 
